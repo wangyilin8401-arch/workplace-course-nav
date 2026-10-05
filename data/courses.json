@@ -1,0 +1,83 @@
+{
+  "site": {
+    "name": "职场新人成长课",
+    "title": "职场新人成长课 · 课程资料导航",
+    "keywords": "职场新人,课程资料,简历,面试,职场沟通,效率工具",
+    "desc": "职场新人成长课配套资料索引：简历求职、面试通关、职场沟通、效率工具、时间管理、长期成长，支持标题搜索。"
+  },
+  "categories": [
+    {
+      "name": "简历与求职准备",
+      "icon": "linecons-star",
+      "color": "#185FA5",
+      "items": [
+        { "title": "超级简历 WonderCV", "desc": "智能排版简历模板，按岗位自动校对措辞", "url": "https://www.wondercv.com/" },
+        { "title": "五百丁在线简历", "desc": "可视化简历制作，支持一键导出 PDF", "url": "https://www.500d.me/" },
+        { "title": "Canva 可画简历模板", "desc": "设计感模板库，适合作品集与创意岗位", "url": "https://www.canva.cn/" },
+        { "title": "乔布简历", "desc": "应届生简历模板与案例参考", "url": "http://cv.qiaobutang.com/" },
+        { "title": "简历自查清单", "desc": "投递前必查的 12 项：信息完整度、量化成果、错别字", "url": "https://www.wondercv.com/jianli/" }
+      ]
+    },
+    {
+      "name": "面试通关",
+      "icon": "linecons-doc",
+      "color": "#993C1D",
+      "items": [
+        { "title": "牛客网面经广场", "desc": "真实面经、笔试题库与内推信息聚合", "url": "https://www.nowcoder.com/" },
+        { "title": "力扣 LeetCode", "desc": "技术岗笔试算法刷题，按公司标签练习", "url": "https://leetcode.cn/" },
+        { "title": "看准网", "desc": "公司点评、面试难度与薪资区间查询", "url": "https://www.kanzhun.com/" },
+        { "title": "BOSS 直聘", "desc": "岗位筛选与直聊，练习自我介绍话术", "url": "https://www.zhipin.com/" },
+        { "title": "牛客面试讨论区", "desc": "高频面试问题与参考答案讨论", "url": "https://www.nowcoder.com/discuss" }
+      ]
+    },
+    {
+      "name": "职场沟通与协作",
+      "icon": "linecons-user",
+      "color": "#0F6E56",
+      "items": [
+        { "title": "得到·沟通课", "desc": "结构化表达与向上沟通的系统课程", "url": "https://www.dedao.cn/" },
+        { "title": "《沟通的方法》豆瓣页", "desc": "书籍条目，含目录与读者拆解笔记", "url": "https://book.douban.com/subject/35283878/" },
+        { "title": "TED 中文演讲", "desc": "公开表达范本，练语感与叙事节奏", "url": "https://www.ted.com/talks?language=zh-cn" },
+        { "title": "飞书帮助中心", "desc": "文档协作、会议纪要、项目协同的标准做法", "url": "https://www.feishu.cn/hc/" },
+        { "title": "樊登读书", "desc": "职场类书籍精讲，通勤时间听书", "url": "https://www.dushu.io/" }
+      ]
+    },
+    {
+      "name": "效率工具箱",
+      "icon": "linecons-lightbulb",
+      "color": "#534AB7",
+      "items": [
+        { "title": "飞书", "desc": "文档、日历、多维表格一体的协作平台", "url": "https://www.feishu.cn/" },
+        { "title": "腾讯文档", "desc": "轻量在线文档，适合快速共享与收集", "url": "https://docs.qq.com/" },
+        { "title": "Notion", "desc": "搭建个人知识库与课程笔记系统", "url": "https://www.notion.so/" },
+        { "title": "ProcessOn", "desc": "流程图与思维导图，梳理业务流程", "url": "https://www.processon.com/" },
+        { "title": "XMind", "desc": "思维导图工具，做课程知识结构图", "url": "https://xmind.cn/" },
+        { "title": "幕布", "desc": "大纲笔记，一键转思维导图", "url": "https://mubu.com/" }
+      ]
+    },
+    {
+      "name": "时间管理与复盘",
+      "icon": "linecons-clock",
+      "color": "#854F0B",
+      "items": [
+        { "title": "滴答清单", "desc": "任务收集与提醒，落实每日三件事", "url": "https://www.dida365.com/" },
+        { "title": "番茄土豆", "desc": "番茄钟计时，统计专注时长", "url": "https://pomotodo.com/" },
+        { "title": "Forest 专注森林", "desc": "手机端防分心，种树养成专注习惯", "url": "https://www.forestapp.cc/" },
+        { "title": "Microsoft To Do", "desc": "跨平台待办，与 Outlook 日程打通", "url": "https://todo.microsoft.com/" },
+        { "title": "Notion 模板库", "desc": "周复盘、OKR 追踪模板直接套用", "url": "https://www.notion.so/templates" }
+      ]
+    },
+    {
+      "name": "长期成长与副业",
+      "icon": "linecons-heart",
+      "color": "#A32D2D",
+      "items": [
+        { "title": "极客时间", "desc": "体系化技术与管理课程，按需选修", "url": "https://time.geekbang.org/" },
+        { "title": "B 站知识区", "desc": "免费长视频课程，覆盖面广", "url": "https://www.bilibili.com/v/knowledge" },
+        { "title": "知乎·职场话题", "desc": "真实案例讨论，判断行业趋势", "url": "https://www.zhihu.com/topic/19551111/hot" },
+        { "title": "中国大学 MOOC", "desc": "高校正规课程，补基础学科短板", "url": "https://www.icourse163.org/" },
+        { "title": "网易云课堂", "desc": "职业技能课程与实操项目练习", "url": "https://study.163.com/" }
+      ]
+    }
+  ]
+}

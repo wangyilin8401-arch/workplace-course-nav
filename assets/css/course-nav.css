@@ -1,0 +1,181 @@
+/* 课程资料导航页 · 自包含样式（无第三方依赖）
+   复刻 WebStack 的深色侧边栏 + 浅色内容 + 卡片网格，仅保留本项目用到的部分 */
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    color: #2c2e2f;
+    background: #f4f5f7;
+    font-size: 14px;
+    line-height: 1.5;
+}
+a { color: inherit; text-decoration: none; }
+
+/* ---------- 布局：侧边栏 + 内容 ---------- */
+.page-container { min-height: 100vh; }
+
+.sidebar-menu {
+    position: fixed;
+    top: 0; bottom: 0; left: 0;
+    width: 240px;
+    background: #2c2e2f;
+    color: #dcdcdc;
+    overflow-y: auto;
+    padding-bottom: 30px;
+}
+.logo-env { padding: 22px 20px 14px; }
+.logo-text {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: .5px;
+}
+.main-menu { list-style: none; margin: 6px 0 0; padding: 0; }
+.main-menu > li > a {
+    display: block;
+    padding: 11px 20px;
+    color: #dcdcdc;
+    font-size: 14px;
+    transition: color .15s, background .15s;
+}
+.main-menu > li > a:hover,
+.main-menu > li.active > a {
+    color: #fff;
+    background: rgba(255, 255, 255, .07);
+}
+.main-menu .cn-ico { width: 16px; height: 16px; margin-right: 9px; vertical-align: -3px; }
+
+.main-content {
+    margin-left: 240px;
+    padding: 26px 30px 60px;
+    min-height: 100vh;
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    margin: -6px -6px 8px;
+}
+.user-info-menu { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; }
+.user-info-menu a { display: inline-flex; align-items: center; gap: 6px; color: #6b6b6b; font-size: 13px; }
+.user-info-menu .cn-ico { width: 15px; height: 15px; }
+
+/* ---------- 搜索框 ---------- */
+.cn-search-wrap { padding: 18px 0 10px; }
+.cn-search { position: relative; max-width: 560px; }
+.cn-search .cn-ico-search {
+    position: absolute; left: 15px; top: 13px; width: 16px; height: 16px; color: #979898;
+}
+#cn-search-input {
+    width: 100%; height: 44px; padding: 0 96px 0 42px;
+    border: 1px solid #e3e3e3; border-radius: 22px; background: #fff;
+    font-size: 14px; outline: none; transition: border-color .2s;
+}
+#cn-search-input:focus { border-color: #378ADD; }
+.cn-count { position: absolute; right: 16px; top: 14px; font-size: 12px; color: #979898; }
+.cn-empty { padding: 46px 0; text-align: center; color: #979898; font-size: 14px; }
+
+/* ---------- 分类与卡片 ---------- */
+.cn-section { margin-top: 18px; }
+.cn-section > h4 {
+    font-size: 16px; font-weight: 600; color: #2c2e2f; margin: 8px 0 14px;
+}
+.cn-section > h4 .cn-ico { width: 18px; height: 18px; margin-right: 7px; vertical-align: -3px; color: #378ADD; }
+.row { display: flex; flex-wrap: wrap; margin: 0 -10px; }
+.col-sm-3 { width: 25%; padding: 0 10px; margin-bottom: 18px; }
+
+.xe-widget .box2 {
+    display: flex; align-items: center; gap: 12px;
+    background: #fff; border-radius: 8px; padding: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+    cursor: pointer; transition: transform .15s, box-shadow .15s;
+}
+.xe-widget .box2:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0, 0, 0, .12); }
+.cn-avatar {
+    flex: 0 0 40px; width: 40px; height: 40px; line-height: 40px;
+    border-radius: 50%; color: #fff; font-size: 16px; font-weight: 500; text-align: center;
+}
+.xe-comment { min-width: 0; }
+.xe-comment strong { display: block; font-size: 14px; color: #2c2e2f; }
+.xe-comment p {
+    margin: 3px 0 0; font-size: 12px; color: #8b8b8b;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* ---------- 页脚 ---------- */
+.main-footer {
+    margin-top: 40px; padding-top: 18px; border-top: 1px solid #e7e8ea;
+    color: #9a9a9a; font-size: 12px;
+}
+.footer-text a { color: #378ADD; }
+.go-up { margin-top: 8px; }
+.go-up .cn-ico { width: 18px; height: 18px; color: #b5b5b5; }
+
+/* ---------- 通用 SVG 图标（stroke 跟随 currentColor） ---------- */
+.cn-ico {
+    display: inline-block; width: 16px; height: 16px;
+    fill: none; stroke: currentColor; stroke-width: 2;
+    stroke-linecap: round; stroke-linejoin: round;
+}
+.cn-ico-github { stroke-width: 2; }
+.cn-ico-angle-up { stroke-width: 2.4; }
+.cn-ico-search { stroke-width: 2; }
+.cn-ico-star { stroke: #378ADD; }
+
+/* ---------- 性格测试页 ---------- */
+.cn-quiz { max-width: 900px; }
+.cn-quiz-intro h4 { margin: 4px 0 10px; font-size: 20px; }
+.cn-quiz-intro p { color: #8b8b8b; font-size: 13px; line-height: 1.7; }
+.cn-q { padding: 16px 0; border-bottom: 1px solid #eee; }
+.cn-q-text { font-size: 14px; line-height: 1.6; margin-bottom: 10px; }
+.cn-q-no {
+    display: inline-block; width: 22px; height: 22px; line-height: 22px;
+    border-radius: 50%; background: #f0f0f0; color: #888; font-size: 12px; text-align: center; margin-right: 8px;
+}
+.cn-q-scale { display: flex; flex-wrap: wrap; gap: 8px; }
+.cn-q-scale label {
+    display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px;
+    border: 1px solid #e3e3e3; border-radius: 16px; background: #fff; font-size: 13px; cursor: pointer;
+    transition: border-color .15s, background .15s;
+}
+.cn-q-scale label:hover { border-color: #378ADD; }
+.cn-q-scale label.checked { border-color: #378ADD; background: #E6F1FB; }
+.cn-q-scale input { margin: 0; }
+.cn-quiz-actions { display: flex; align-items: center; gap: 16px; padding: 20px 0 8px; }
+#cn-submit {
+    height: 40px; padding: 0 26px; border: 0; border-radius: 20px;
+    background: #378ADD; color: #fff; font-size: 14px; cursor: pointer;
+}
+#cn-submit:disabled { background: #c9c9c9; cursor: not-allowed; }
+#cn-progress { font-size: 13px; color: #979898; }
+.cn-result-card { background: #fafafa; border: 1px solid #eee; border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+.cn-type-code { font-size: 24px; font-weight: 500; color: #2c2e2f; }
+.cn-type-names { font-size: 14px; color: #666; margin: 4px 0 12px; }
+.cn-type-desc { font-size: 13px; line-height: 1.7; color: #666; margin: 0 0 8px; }
+.cn-sub-title { font-size: 13px; color: #2c2e2f; font-weight: 500; margin: 16px 0 8px; }
+.cn-jobs { display: flex; flex-wrap: wrap; gap: 8px; }
+.cn-job { padding: 4px 12px; border-radius: 14px; background: #EEEDFE; color: #534AB7; font-size: 13px; }
+.cn-rec-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.cn-rec-links a {
+    padding: 6px 14px; border: 1px solid #85B7EB; border-radius: 16px; color: #185FA5; font-size: 13px;
+}
+.cn-rec-links a:hover { background: #E6F1FB; }
+.cn-bar-row { display: flex; align-items: center; gap: 10px; padding: 4px 0; }
+.cn-bar-name { width: 100px; font-size: 13px; color: #666; }
+.cn-bar-track { flex: 1; height: 10px; background: #eee; border-radius: 5px; overflow: hidden; }
+.cn-bar-track i { display: block; height: 100%; border-radius: 5px; }
+.cn-bar-val { width: 26px; text-align: right; font-size: 13px; color: #888; }
+.cn-note { font-size: 12px; color: #9a9a9a; margin: 14px 0 0; }
+.cn-again { margin-top: 12px; }
+.cn-again a { font-size: 13px; color: #185FA5; }
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 992px) {
+    .col-sm-3 { width: 50%; }
+}
+@media (max-width: 680px) {
+    .sidebar-menu { position: static; width: 100%; height: auto; }
+    .main-content { margin-left: 0; padding: 20px 16px 50px; }
+    .col-sm-3 { width: 100%; }
+}
